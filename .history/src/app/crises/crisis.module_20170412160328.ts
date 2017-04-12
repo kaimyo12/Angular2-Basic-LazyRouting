@@ -19,8 +19,7 @@ import { CrisisPageNotFoundComponent } from './crisis-pagenotfound.component';
     CrisisCenterComponent,
     CrisisDetailComponent,
     CrisisListComponent,
-    CrisisEndComponent,
-    CrisisPageNotFoundComponent
+    CrisisEndComponent
   ],
   providers: [ CrisisService ]
 })

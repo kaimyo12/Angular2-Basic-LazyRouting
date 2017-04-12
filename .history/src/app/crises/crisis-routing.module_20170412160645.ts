@@ -34,7 +34,7 @@ const crisisRoutes: Routes = [
       component: CrisisDetailComponent,
     },
     {
-      path:'**',
+      path:'**/**', // take the crises-center off when you do lazy loading
       component: CrisisPageNotFoundComponent
     }
       ]; // set for the crisisendcomp to show up, i used another children here

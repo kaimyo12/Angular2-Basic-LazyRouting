@@ -6,12 +6,13 @@ import { CrisisModule } from './crises/crisis.module';
 const appRoutes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' }, // be careful at positioning the paths
     //{ path: 'crises-center', loadChildren: 'app/crises/crisis.module#CrisisModule' },
-    { path: '**', component: PageNotFoundComponent }// make sure to make this last
+    { path: '**', component: PageNotFoundComponent }, // make sure to make this last
     ]
 
     //lazy-loading, always remember the first step is to make the path to an empty string
     //Now create a path in the app-routing.module and add a new admin router
     //the path that we'll make is the one that will call the lazy module
+    //now if there are other paths, be sure to also change it and add the base path
     //Now in the app.module, remove the crisismodule import and in the array
 
 @NgModule({

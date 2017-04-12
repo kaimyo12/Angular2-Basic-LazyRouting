@@ -20,7 +20,7 @@ import { CrisisModule } from './crises/crisis.module';
     HttpModule,
     LoginModule,
     HeroesModule,
-    CrisisModule,
+    //CrisisModule,
     AppRoutingModule
   ],
   providers: [],

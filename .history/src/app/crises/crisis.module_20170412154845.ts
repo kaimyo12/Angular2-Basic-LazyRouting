@@ -7,7 +7,7 @@ import { CrisisDetailComponent } from './crisis-detail.component';
 import { CrisisListComponent } from './crisis-list.component';
 import { CrisisService } from './crisis.service';
 import { CrisisEndComponent } from './crisis-end.component';
-import { CrisisPageNotFoundComponent } from './crisis-pagenotfound.component';
+
 
 @NgModule({
   imports: [
@@ -19,8 +19,7 @@ import { CrisisPageNotFoundComponent } from './crisis-pagenotfound.component';
     CrisisCenterComponent,
     CrisisDetailComponent,
     CrisisListComponent,
-    CrisisEndComponent,
-    CrisisPageNotFoundComponent
+    CrisisEndComponent
   ],
   providers: [ CrisisService ]
 })

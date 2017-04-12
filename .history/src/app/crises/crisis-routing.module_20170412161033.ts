@@ -8,7 +8,7 @@ import { CrisisPageNotFoundComponent } from './crisis-pagenotfound.component';
 
 const crisisRoutes: Routes = [
     {
-      path: 'crises-center',
+      path: '',
       component: CrisisCenterComponent,
       children: [
         {
@@ -30,7 +30,7 @@ const crisisRoutes: Routes = [
       ]
     },
     {
-      path:'crises-center/:id', // take the crises-center off when you do lazy loading
+      path:':id', // take the crises-center off when you do lazy loading
       component: CrisisDetailComponent,
     },
     {

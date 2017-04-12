@@ -8,6 +8,11 @@ import { CrisisPageNotFoundComponent } from './crisis-pagenotfound.component';
 
 const crisisRoutes: Routes = [
     {
+      path:'',
+      redirectTo:'/crises-center',
+      pathMatch: 'full'
+    },
+    {
       path: 'crises-center',
       component: CrisisCenterComponent,
       children: [
@@ -30,13 +35,9 @@ const crisisRoutes: Routes = [
       ]
     },
     {
-      path:'crises-center/:id', // take the crises-center off when you do lazy loading
-      component: CrisisDetailComponent,
+      path:'crises-center/:id', 
+      component: CrisisDetailComponent
     },
-    {
-      path:'**',
-      component: CrisisPageNotFoundComponent
-    }
       ]; // set for the crisisendcomp to show up, i used another children here
 
   // {

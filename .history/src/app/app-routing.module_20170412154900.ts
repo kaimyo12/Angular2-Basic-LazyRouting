@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './page-not-found.component';
 import { CrisisModule } from './crises/crisis.module';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' }, // be careful at positioning the paths
-    //{ path: 'crises-center', loadChildren: 'app/crises/crisis.module#CrisisModule' },
-    { path: '**', component: PageNotFoundComponent }// make sure to make this last
+    { path: 'crises-center', loadChildren: 'app/crises/crisis.module#CrisisModule' },
+    { path: '**', component: PageNotFoundComponent }, // make sure to make this last
     ]
 
     //lazy-loading, always remember the first step is to make the path to an empty string

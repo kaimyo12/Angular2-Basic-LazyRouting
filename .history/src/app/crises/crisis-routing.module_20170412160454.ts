@@ -32,11 +32,13 @@ const crisisRoutes: Routes = [
     {
       path:'crises-center/:id', // take the crises-center off when you do lazy loading
       component: CrisisDetailComponent,
-    },
+      children: [
     {
-      path:'**',
+      path:'**', // take the crises-center off when you do lazy loading
       component: CrisisPageNotFoundComponent
     }
+      ]
+    },
       ]; // set for the crisisendcomp to show up, i used another children here
 
   // {

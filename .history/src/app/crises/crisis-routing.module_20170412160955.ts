@@ -8,7 +8,7 @@ import { CrisisPageNotFoundComponent } from './crisis-pagenotfound.component';
 
 const crisisRoutes: Routes = [
     {
-      path: 'crises-center',
+      path: '',
       component: CrisisCenterComponent,
       children: [
         {

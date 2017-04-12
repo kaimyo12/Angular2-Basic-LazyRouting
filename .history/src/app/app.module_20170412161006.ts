@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { LoginModule } from './login/login.module';
 import { HeroesModule } from './heroes/heroes.module';
-import { CrisisModule } from './crises/crisis.module';
+//import { CrisisModule } from './crises/crisis.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { CrisisModule } from './crises/crisis.module';
     HttpModule,
     LoginModule,
     HeroesModule,
-    CrisisModule,
+ //   CrisisModule,
     AppRoutingModule
   ],
   providers: [],

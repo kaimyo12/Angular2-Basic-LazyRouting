@@ -4,11 +4,11 @@ import { CrisisCenterComponent } from './crisis-center.component';
 import { CrisisListComponent } from './crisis-list.component';
 import { CrisisDetailComponent } from './crisis-detail.component';
 import { CrisisEndComponent } from './crisis-end.component';
-import { CrisisPageNotFoundComponent } from './crisis-pagenotfound.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 
 const crisisRoutes: Routes = [
     {
-      path: 'crises-center',
+      path: '',
       component: CrisisCenterComponent,
       children: [
         {
@@ -30,14 +30,11 @@ const crisisRoutes: Routes = [
       ]
     },
     {
-      path:'crises-center/:id', // take the crises-center off when you do lazy loading
-      component: CrisisDetailComponent,
-    },
-    {
-      path:'**',
-      component: CrisisPageNotFoundComponent
+      path:':id', 
+      component: CrisisDetailComponent
     }
-      ]; // set for the crisisendcomp to show up, i used another children here
+    { path: '**', component: PageNotFoundComponent }
+  ]; // set for the crisisendcomp to show up, i used another children here
 
   // {
   //     path: '',
