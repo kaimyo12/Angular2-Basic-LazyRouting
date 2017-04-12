@@ -4,8 +4,9 @@ import { Router }      from '@angular/router';
 @Component({
   template: `
     <h2>LOGIN</h2>
+    <p>{{message}}</p>
     <p>
-      <button>Log-in</button>
+      <button (click)="login()">{{log}}</button>
     </p>`
 })
 export class LoginComponent {

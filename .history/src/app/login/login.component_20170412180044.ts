@@ -4,13 +4,18 @@ import { Router }      from '@angular/router';
 @Component({
   template: `
     <h2>LOGIN</h2>
+    <p>{{message}}</p>
     <p>
-      <button>Log-in</button>
+      <button (click)="login()">{{log}}</button>
     </p>`
 })
 export class LoginComponent {
 
-  message: string = "Logged-out";
-  log: string = "Log-in";
-  l: boolean;
+  message: string;
+  log: string;
+
+  login()
+  {
+    this.message = 'Logged-in';
+  }
 }

@@ -5,7 +5,7 @@ import { Router }      from '@angular/router';
   template: `
     <h2>LOGIN</h2>
     <p>
-      <button>Log-in</button>
+      <button></button>
     </p>`
 })
 export class LoginComponent {
