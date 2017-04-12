@@ -11,13 +11,13 @@ const crisisRoutes: Routes = [
       path: 'crises-center',
       component: CrisisCenterComponent,
       children: [
-        { 
+        {
           path: '',
           component: CrisisListComponent,
           children: 
         [
         {
-          path: '',
+          path: 'list2',
           component: CrisisListComponent
         , children:
         [
@@ -29,13 +29,12 @@ const crisisRoutes: Routes = [
         }
           ]
         },
-    {
-      path:':id',
-      component: CrisisDetailComponent,
-    },
       ]
     },
-
+    {
+      path:'crises-center/:id', // take the crises-center off when you do lazy loading
+      component: CrisisDetailComponent,
+    },
       ]; // set for the crisisendcomp to show up, i used another children here
 
   // {

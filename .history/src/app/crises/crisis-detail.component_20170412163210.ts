@@ -42,6 +42,7 @@ export class CrisisDetailComponent implements OnInit
     }
 
 gotoCrisis() {
+   let crisisId = this.crisis ? this.crisis.id : null;
   // Pass along the Crisis id if available
   // so that the CrisisList component can select that Crisis.
   // Include a junk 'foo' property for fun.
