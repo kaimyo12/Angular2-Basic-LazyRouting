@@ -6,6 +6,7 @@ import { CrisisModule } from './crises/crisis.module';
 const appRoutes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' }, // be careful at positioning the paths
     //{ path: 'crises-center', loadChildren: 'app/crises/crisis.module#CrisisModule' },
+    { path: 'heroes' }
     { path: '**', component: PageNotFoundComponent }// make sure to make this last
     ]
 

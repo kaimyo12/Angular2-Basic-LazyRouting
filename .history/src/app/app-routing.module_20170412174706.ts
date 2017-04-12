@@ -10,7 +10,7 @@ const appRoutes: Routes = [
     ]
 
     //lazy-loading, always remember the first step is to make the path to an empty string
-    //Now create a path in the app-routing.module and add a new path
+    //Now create a path in the app-routing.module and add a new admin router
     //the path that we'll make is the one that will call the lazy module
     //Now in the app.module, remove the crisismodule import and in the array
 
