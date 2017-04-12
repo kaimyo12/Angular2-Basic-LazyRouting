@@ -1,0 +1,48 @@
+import { Component , OnInit} from '@angular/core';
+import { Crisis } from './crisis';
+import { CrisisService } from './crisis.service';
+import { Router } from '@angular/router';
+
+@Component({
+    template: `
+    <h3> Crisis List</h3>
+    <ul>
+        <li *ngFor = "let crisis of crises" (click) = "onSelect(crisis)">
+            <span> {{crisis.id}}</span>
+                {{crisis.title}}
+        </li>
+    </ul>
+
+    <div *ngIf="selectedCrisis">
+        <h3>My crisis is {{selectedCrisis.title}}</h3>
+        <button (click)="goToDetails()">View Crisis!</button>
+    </div>
+    <router-outlet> </router-outlet>
+    `
+})
+
+export class CrisisListComponent implements OnInit
+{
+    crisis: Crisis;
+    crises: Crisis[];
+    selectedCrisis: Crisis;
+
+    constructor(private service: CrisisService,
+                private router: Router){}
+
+    ngOnInit()
+    {
+        this.service.getCrises()
+        .then(crises => this.crises = crises);
+    }
+
+    onSelect(crisis: Crisis)
+    {
+        this.selectedCrisis = crisis;
+    }
+
+    goToDetails()
+    {
+        this.router.navigate(['crises-center/list', this.selectedCrisis.id])
+    }
+}
